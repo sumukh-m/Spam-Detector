@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Results</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="{{ url_for('static', filename='css/main.css') }}">
-    <script src='main.js'></script>
-</head>
+<title>Results</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('../static/results.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 <body>
-	<div class="register_page">
-	<header>
-		<div class="container">
-		<div id="brandname">
-			Cloud Computing Mini Project
-		</div>
-		<h2>Spam Detection</h2>
-		
-	</div>
-	</header>
-	<p style="color:yellow;font-size:20;text-align: center;"><b>Results for Comment</b></p>
-	<div class="results">
 
-
-		
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Spam Detection System
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Results</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    
+    <div class="results">
 	{% if prediction == 1%}
-	<h2 style="color:red;">Spam</h2>
+	<p class="w3-xlarge w3-center">Spam</p>
 	{% elif prediction == 0%}
-	<h2 style="color:green;">Not a Spam (It is a Ham)</h2>
+	<p class="w3-xlarge w3-center"><b>Not Spam (It is a Ham)</b></p>
 	{% endif %}
 
 	</div>
-	</div>
+
+  </div>
+</div>
 
 </body>
 </html>

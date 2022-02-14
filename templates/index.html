@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <title>Spam Detection System</title>
@@ -5,48 +6,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
-
-/* Full height image header */
-.bgimg-1 {
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('../static/home.jpg');
+  min-height: 100%;
   background-position: center;
   background-size: cover;
-  background-image: url("/images/spam.jpeg");
-  min-height: 100%;
-}
-
-.w3-bar .w3-button {
-  padding: 16px;
 }
 </style>
 <body>
 
-
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Spam Detection System</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Spam Detection System</span><br>
-    <span class="w3-large">Enter Text Here</span>
   
+<!-- Header with image -->
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Spam Detection System<br></h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Enter Text Here</p>
     <form action="{{url_for('predict')}}" method="Post">
       <!-- <input type="text" name="comment"/> -->
-      <textarea name="comment" rows="4" cols="50"></textarea>
+      <textarea name="comment" rows="10" cols="100"></textarea>
       <p>
-        <button class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off" type="submit">
-          <i class="fa fa-paper-plane"></i> PREDICT
-        </button>
+        <button class="w3-button w3-white w3-padding-large w3-large w3-margin-top">  PREDICT  </button>
       </p>
     </form>
-  </div> 
+  </div>
+  
+</div>
+
 </header>
+
 
 </body>
 </html>
